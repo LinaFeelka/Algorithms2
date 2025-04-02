@@ -1,0 +1,24 @@
+import java.util.StringTokenizer;
+import java.util.List;
+import java.util.LinkedList; 
+import java.util.Scanner; 
+
+public class Main { 
+    public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner( System.in ); 
+        System.out.print("Введите строку. "); 
+        String string = scanner.nextLine();
+        //abc abc ab abc ab acs acs
+        
+        StringTokenizer strtoken = new StringTokenizer(string, " ");
+        List<String> list = new LinkedList<String>();
+        
+        while (strtoken.hasMoreTokens()) {
+            String buf = strtoken.nextToken();
+            if (!list.contains(buf))
+                list.add(buf);
+        }
+        
+        for (String i : list) System.err.print(i + " ");
+    }
+}
