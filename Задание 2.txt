@@ -1,12 +1,14 @@
+//№ зачетки 247357. Вариант № 6
+
 import java.util.StringTokenizer;
 import java.util.List;
 import java.util.LinkedList; 
 import java.util.Scanner; 
 
-public class Main { 
+class Main { 
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner( System.in ); 
-        System.out.print("Введите строку. "); 
+        System.out.println("Введите строку. "); 
         String string = scanner.nextLine();
         //abc abc ab abc ab acs acs
         
@@ -18,7 +20,6 @@ public class Main {
             if (!list.contains(buf))
                 list.add(buf);
         }
-        
-        for (String i : list) System.err.print(i + " ");
+        for (String i : list) System.out.print(i + " ");
     }
 }
